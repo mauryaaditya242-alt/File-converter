@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: file-converter
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      LIBREOFFICE_PATH: soffice
+    mem_limit: 2g
